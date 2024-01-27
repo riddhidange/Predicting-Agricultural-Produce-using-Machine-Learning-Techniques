@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sign Up</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link href="/css/sign_up.css" rel="stylesheet">
+    <link href="https://kit-pro.fontawesome.com/releases/v5.13.1/css/pro.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
+</head>
+<body>
+    <!-- nav bar -->
+    <div>
+        <nav class="navbar navbar-expand-md navbar-light sticky-top">
+            <div class="container-fluid">
+                <a style=" font-size: 150%; font-weight: bold;" class="navbar-brand" href="#">DISCUSSION</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-responsive">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar-responsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link lead" style="font-weight: bold;" href="/users/sign-in">Sign In</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- sign in form -->
+    <div id="sign-in-form" class="container-fluid text-center" style="margin-top: 12vh;">
+        <div class="row padding">
+            <div class="col-12">
+                <h2 class="display-3" style="font-weight: bold;">Register</h2>
+                <br>
+                <form action="/users/create" method="POST">
+                    <i style="font-size: 24px;" class="fas fa-user-circle"></i>&nbsp&nbsp&nbsp&nbsp<input style="border-radius: 2vh; border:none; " type="text" name="name" placeholder="Name" required><br><br>
+                    <i  style="font-size: 24px;" class="fas fa-envelope"></i>&nbsp&nbsp&nbsp&nbsp<input style="border-radius: 2vh; border:none; " type="email" name="email" placeholder="Email" required><br><br>
+                    <i  style="font-size: 24px;" class="fas fa-key"></i>&nbsp&nbsp&nbsp&nbsp<input style="border-radius: 2vh; border:none; " type="password" name="password" placeholder="Password" required><br><br>
+                    <i  style="font-size: 24px;" class="fas fa-lock"></i>&nbsp&nbsp&nbsp&nbsp<input style="border-radius: 2vh; border:none; " type="password" name="confirm_password" placeholder="Confirm Password" required><br><br>
+                    <input class="btn btn-dark btn-lg" type="submit" value="Sign Up">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

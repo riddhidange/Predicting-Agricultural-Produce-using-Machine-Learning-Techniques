@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sign In</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href="/css/sign_in.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
+</head>
+<body>
+    <!-- nav bar -->
+    <div>
+        <nav class="navbar navbar-expand-md navbar-light sticky-top">
+            <div class="container-fluid">
+                <a style=" font-size: 150%;font-weight: bold;" class="navbar-brand" href="#">DISCUSSION</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-responsive">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar-responsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" style="font-weight: bold;" href="/users/sign-up">Sign Up</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- sign in form -->
+    <div id="sign-in-form" class="container-fluid text-center">
+    <div class="row padding">
+        <div class="col-12">
+            <h2 class="display-3" style="font-weight:bold;">Sign In</h2>
+            <br>
+            <form action="/users/create-session" method="POST">
+                <i style="font-size: 22px;" class="fas fa-envelope"></i>&nbsp&nbsp&nbsp
+                <input style="font-size: 20px;border: none; border-radius: 1vw;" type="email" name="email" placeholder="Email"  required>
+                <br>
+                <br>
+                <i style="font-size: 20px;" class="fas fa-unlock"></i>&nbsp&nbsp&nbsp
+                <input style="font-size: 20px; border: none; border-radius: 1vw;" type="password" name="password" placeholder="Password"  required>
+                <br>
+                <br>
+                <div id="sign-in-button" class="btn btn-lg">
+                <input class="btn btn-dark btn-lg" id="sign-in-button" type="submit" value="Sign In">
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

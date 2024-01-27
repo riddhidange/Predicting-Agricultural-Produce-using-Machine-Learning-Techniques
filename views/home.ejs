@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<link href="https://kit-pro.fontawesome.com/releases/v5.13.1/css/pro.min.css" rel="stylesheet">
+	<link href="/css/home.css" rel="stylesheet">
+		
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+</head>
+<body>
+	
+
+
+
+	<!-- <h1>Hello</h1> -->
+	<div>
+        <nav class="navbar navbar-expand-md navbar-light sticky-top">
+            <div class="container-fluid">
+                <a style=" font-size: 150%; color: black; font-weight: bold;" class="navbar-brand" href="#">HOME</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-responsive">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar-responsive">
+                    <ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+                            <a style="font-weight: bold;" class="nav-link" href="#features">{Features}</a>
+                        </li>
+						<li class="nav-item">
+                            <a style="font-weight: bold;" class="nav-link" href="/discussion">{Doubts}</a>
+                        </li>
+						<li class="nav-item">
+                            <a style="font-weight: bold;" class="nav-link" href="/users/sign-out">{Sign Out}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+<br>
+
+	<div id="welcome" class="container-fluid">
+	<div class="row text-center">
+		<!-- <div class="col-3">
+			<img style="height: 30%;" src="/images/tree1.png">
+		</div> -->
+		<div class="col-md-12">
+			<h1 class="display-4">Prediction of <span style="color: teal;">Agricultural Produce</span></h1>
+			<!-- <p class="lead">Scroll down</p> --><br>
+			<a href="#twocolumn"><i style="font-size: 5vh; color: black;" class="fas fa-chevron-down"></i></a>
+			<img height="50%" width="100%" src="/images/crop.png">
+		</div>
+		<!-- <div class="col-3">
+			<img style="height: 40%; width: 100%;" src="/images/tree2.png" alt="">
+		</div> -->
+	</div>
+	</div>
+
+<!-- Carousel -->
+
+
+		<!--- Two Column Section -->
+<div id="twocolumn" class="container-fluid padding">
+	<div class="row padding">
+		<div class="col-lg-6">
+			<h2>Did you know?</h2>
+			<p class="lead">
+				Agriculture has the largest contribution to the GDP of our country. But still, 
+				the farmers do not get the exact worth price of the crops. It is mostly happening
+				 due to improper irrigation or inappropriate crops selection or also sometimes the crop 
+				 yield is less than that expected.
+			</p>
+			<p class="lead">
+				In order to add efficiency to the whole agriculture process, a “Predicting agricultural 
+				produce using Machine Learning Techniques” is proposed in the following project.
+			</p>
+			<p class="lead">
+				
+			</p>
+			<a href="#">
+				<button type="button" class="btn btn-primary btn-lg">Learn More</button>
+			</a>
+		</div>
+		<div class="col-lg-6 ">
+			<img style="border-radius: 10vh;" src="/images/photo-1559884743-74a57598c6c7.jpg" class="img-fluid">
+		</div>
+	</div>
+	</div>
+
+<hr class="my-4">
+
+			<h1 id="features" class="display-3" style="text-align: center; color: black;">Our Features</h1>
+			
+
+			<div style="display: flex; align-items: center; justify-content: center;" class="container-fluid padding">
+				<!-- <div class="row padding text-center">
+					<div class="col-md-4 ">
+							<div class="card shadow-lg">
+								<div class="card-body">
+									<i style="font-size: 10vh; color: orangered;" class="fad fa-tractor"></i><br><br>
+									<h3 style="font-weight: bold;">Predicting Agricultural<br> Produce</h3>
+									<p class="lead col-md-10 container-fluid">This module aims at predicting agricultural produce by <br>
+										<span><i class="fad fa-chevron-right"></i></span>  Identifying the crop through images <br>
+										<span><i class="fad fa-chevron-right"></i></span> Calculating area under cultivation using Google API
+									</p>
+									<a href="#">
+										<button class="btn-info btn">Try it</button>
+									</a>
+								</div>
+							</div>
+					</div>
+					<div class="col-md-4">
+							<div class="card">
+								
+								<div class="card-body">
+									<i style="font-size: 10vh; color:green;" class="fal fa-wheat"></i><br><br>
+									<h3 style="font-weight: bold;">Crop Recommendation</h3>
+									<p class="lead col-md-8 container-fluid">
+										This module aims at predicting the most profitable crop
+										according to following characteristics: forecasted weather, soil conditions, 
+										and location
+									</p>
+									<a href="#">
+										<button class="btn-info btn">Try It</button>
+									</a>
+								</div>
+							</div>
+					</div> -->
+					<div style="text-align: center;" class="col-md-4">
+							<div class="card">
+								
+								<div class="card-body">
+									<i style="font-size: 10vh; color:cornflowerblue;" class="fas fa-globe-americas"></i><br><br>
+									<h3 style="font-weight: bold;">Area Calculation</h3>
+									<p class="lead col-md-8 container-fluid">
+										Calculate area of literally any location by just sitting at home.
+									</p>
+									<a href="/area">
+										<button class="btn-info btn">Try It</button>
+									</a>
+								</div>
+							</div>
+					</div>
+				</div>
+				<!-- </div> -->
+			
+
+			<div class="container-fluid padding">
+				<div class="row padding">
+					<div class="col-12 text-center">
+						<p>If you have any <span style="font-weight: bold;">Queries</span>...</p>
+						<p class="lead">Ask them here and get it answered by <span style="font-weight: bold; color: teal;">Professionals</span> & <span style="font-weight: bold; color: teal;">Experts</span></p>
+						<a href="/discussion"><button class="btn-primary btn">Here</button></a>
+					</div>
+				</div>
+			</div>
+
+			
+			
+
+			<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+
+
+			<script>
+				$('document').ready(function(){
+					var typed = new Typed('typed', {
+						stringsElement: '#typed-strings'
+					})
+				});
+			</script>
+
+</body>
+</html>
+
+

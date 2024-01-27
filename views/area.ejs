@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Area Calculator</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link href="https://kit-pro.fontawesome.com/releases/v5.13.1/css/pro.min.css" rel="stylesheet">
+	<link href="/css/area.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css"> -->
+    <!-- <script>
+        $(document).ready(function(){
+            $('a[data-toggle="list"]').on('show.bs.list', function(e) {
+                localStorage.setItem('activeTab', $(e.target).attr('href'));
+            });
+            var activeTab = localStorage.getItem('activeTab');
+            if(activeTab){
+                console.log($('#myTab a[href="' + activeTab + '"]'));
+                $('#myTab a[href="' + activeTab + '"]').tab('show');
+            }
+        });
+    </script> -->
+    <script>
+        function CopyToClipboard(id)
+        {
+        var r = document.createRange();
+        r.selectNode(document.getElementById(id));
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(r);
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges();
+        }
+    </script>
+    <script type="text/javascript">
+        function showLocation(position) {
+           var latitude = position.coords.latitude;
+           var longitude = position.coords.longitude;
+           var latlongvalue = position.coords.latitude + ","
+           + position.coords.longitude;
+           var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="+latlongvalue+"&amp;zoom=14&amp;size=400x300&amp;key=AIzaSyBZ7wrpB1LVvzwNm1x_TNP_GizR48FqZFs";
+           document.getElementById("mapholder").innerHTML = "img src='"+img_url+"'>";
+        }
+        function errorHandler(err) {
+           if(err.code == 1) {
+              alert("Error: Access is denied!");
+           } else if( err.code == 2) {
+              alert("Error: Position is unavailable!");
+           }
+        }
+        function getLocation(){
+           if(navigator.geolocation){
+              // timeout at 60000 milliseconds (60 seconds)
+              var options = {timeout:60000};
+              navigator.geolocation.getCurrentPosition(showLocation, errorHandler, options);
+              console.log("Successfully located");
+           } else{
+              alert("Sorry, browser does not support geolocation!");
+           }
+        }
+     </script>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="/css/area_map.css">
+</head>
+<body>
+    
+   <div>
+      <nav style="background-color: cornflowerblue ; " class="navbar navbar-expand-md navbar-light sticky-top">
+          <div class="container-fluid">
+              <a style=" font-size: 150%; color: black; font-weight: bold;" class="navbar-brand" href="#">Area Calculator</a>
+              <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-responsive">
+                  <span style="color: black;" class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbar-responsive">
+                  <ul class="navbar-nav ml-auto">
+                      <li class="nav-item">
+                          <a style="color: black;font-weight: bold;" class="nav-link" href="/">{Home}</a>
+                      </li>
+                <li class="nav-item">
+                          <a style="color: black;font-weight: bold;" class="nav-link" href="/users/sign-out">{Sign Out}</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+  </div>
+
+
+  
+    
+    <div id="panel" class="container-fluid">
+      
+      <div style="background: rgb(2,0,36);
+      background: linear-gradient(125deg, rgba(2,0,36,1) 0%, rgba(66,130,171,1) 0%, rgba(228,151,207,1) 0%, rgba(55,119,131,1) 0%, rgba(117,215,215,1) 100%, rgba(148,117,226,1) 100%);" class="row padding">
+        <div class="col-md-1" id="color-palette" style="border-top-right-radius: 4vh; border-bottom-right-radius: 5vh;">
+            <h6 style="font-weight: bolder; font-family: poppins;">Color Palette</h6>
+        </div>
+        <div class="col-md-3">
+            <button class="btn-dark btn" onClick="calcar()">Calculate area</button>&nbsp&nbsp
+            <a style="text-decoration: none;" href="#" onclick="CopyToClipboard('area');return false;"><i style="font-size: 3vh; color: black;" class="fad fa-copy"></i><span style="color: black; font-family: poppins;">Copy</span></a>
+            <br>
+            <div >
+                <h6 style="font-weight: bolder; font-family: poppins;" id="area"></h6>
+                
+            </div>
+            
+        </div>
+        
+        <div class="col-md-8">
+            <a href="#" style="float: right;" id="delete-button"><i style="color: red; font-size: 4vh;" class="fas fa-trash"></i></a>&nbsp&nbsp&nbsp&nbsp<br><br>
+            <button style="float: right;" class="btn-outline-info btn" onclick="getLocation();" value="Get Location"><i class="fad fa-location"></i></button>
+        </div>
+        
+        <!-- <div id="mapholder"></div> -->
+        
+        
+      </div>
+    </div>
+    <div class="container-fluid padding text-center col-12 padding" id="map"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=geometry,drawing&key=AIzaSyBZ7wrpB1LVvzwNm1x_TNP_GizR48FqZFs"></script>
+    
+    <script src="/js/area_map.js"></script>
+    
+    
+      
+</body>
+</html>

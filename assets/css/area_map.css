@@ -1,0 +1,33 @@
+#map,
+body {
+  padding: 0;
+  margin: 0;
+  height: 90%;
+  width: 100%;
+}
+
+#panel {
+  height: auto;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  /* float: right; */
+  /* margin: 10px; */
+  background-color: paleturquoise;
+}
+
+#color-palette {
+  clear: both;
+}
+
+.color-button {
+  width: 14px;
+  height: 14px;
+  font-size: 0;
+  margin: 2px;
+  float: left;
+  cursor: pointer;
+}
+
+#delete-button {
+  margin-top: 5px;
+}
